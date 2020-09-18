@@ -1,1 +1,1 @@
-This is the project fromg roup 47.
+This is the project from group 47.
