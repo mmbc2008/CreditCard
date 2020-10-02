@@ -5,8 +5,8 @@ digits = make list of the input
 reverse digits
 
 #step one from assignment
-evendigits = make list of every second digit from digits
-FOR digit in evendigits:
+even_digits = make list of every second digit from digits
+FOR digit in even_digits:
    number1 = digit times two
    number1 = add the numbers from number1 to get a single-digit number
 #step two from assignment

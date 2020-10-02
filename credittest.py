@@ -5,9 +5,9 @@ print("this is the reversed input ", digits) #to check if the step went correctl
 
 #step 1 from assignment
 added_numbers = 0
-evendigits = digits[1::2]
-print('this is the list of even digits from the input ', evendigits)  #to check if the previous step went okay
-for digit in evendigits:
+even_digits = digits[1::2]
+print('this is the list of even digits from the input ', even_digits)  #to check if the previous step went okay
+for digit in even_digits:
     number1 = digit*2
     number1 = sum(int(digit) for digit in str(number1))
     #step 2
