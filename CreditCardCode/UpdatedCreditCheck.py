@@ -58,19 +58,18 @@ of the even digits in it.
 """
 
 
-def even_digits(num):
-    length = len(num)
+def even_digits(numbers):
     total = 0
-    second_to_last = length - 2
-    for i in range(second_to_last, -1, -2):
-        number = num[i]
-        number = number * 2
-        if number > 9:
-            strNumber = str(number)
-            number = eval(strNumber[0] + eval(strNumber[1]))
-            total += number
-        return total
-    print("This is the total"+str(total))
+    new_num = numbers[-2::-2]        #because it is a list of integers, the slice notation is different
+    for i in range(0, len(new_num)): #this line iterates over the sliced list
+        number = new_num[i] * 2      #this line multiplies the even placed digits by 2
+        if number > 9:               #if the number is greater than 9
+            strNumber = str(number)  #this line converts the integer back to a string, so that we can add up the 2 digit number
+            number = (eval(strNumber[0]) + eval(strNumber[1]))  #this line adds the 2 digit number
+        total += number
+    return total
+
+
 
 """
 This function takes the credit card number as a string list parameter and adds all
@@ -78,13 +77,12 @@ of the odd digits in it.
 """
 
 
-def odd_digits(num):
-    length = len(num)
-    end = length - 1
+def odd_digits(numbers):
     sumOdd = 0
-    for i in range(-2, end, -1):
-        num += sumOdd
-    print("This is the odd sum "+str(sumOdd))
+    new_num = numbers[-1:0:-2]        #because it is a list of integers, the slice notation is different
+    for i in range(0, len(new_num)):  #this line iterates over the sliced list
+        sumOdd = sumOdd + new_num[i]  #this line adds the numbers in the odd places
+    print("This is the odd sum " + str(sumOdd))
     return sumOdd
 
 
