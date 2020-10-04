@@ -1,6 +1,7 @@
 """
 This function asks the user for their credit card number and tells them whether or not it is valid.
 """
+import re
 
 
 def ask_user():
