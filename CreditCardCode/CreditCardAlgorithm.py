@@ -60,12 +60,12 @@ of the even digits in it.
 
 def even_digits(numbers):
     total = 0
-    new_num = numbers[-2::-2]        #because it is a list of integers, the slice notation is different
-    for i in range(0, len(new_num)): #this line iterates over the sliced list
-        number = new_num[i] * 2      #this line multiplies the even placed digits by 2
+    even_digits = numbers[-2::-2]        #because it is a list of integers, the slice notation is different
+    for i in range(0, len(even_digits)): #this line iterates over the sliced list
+        number = even_digits[i] * 2      #this line multiplies the even placed digits by 2
         if number > 9:               #if the number is greater than 9
-            strNumber = str(number)  #this line converts the integer back to a string, so that we can add up the 2 digit number
-            number = (eval(strNumber[0]) + eval(strNumber[1]))  #this line adds the 2 digit number
+            str_number = str(number)  #this line converts the integer back to a string, so that we can add up the 2 digit number
+            number = (eval(str_number[0]) + eval(str_number[1]))  #this line adds the 2 digit number
         total += number
     return total
 
@@ -79,9 +79,9 @@ of the odd digits in it.
 
 def odd_digits(numbers):
     sumOdd = 0
-    new_num = numbers[-1:0:-2]        #because it is a list of integers, the slice notation is different
-    for i in range(0, len(new_num)):  #this line iterates over the sliced list
-        sumOdd = sumOdd + new_num[i]  #this line adds the numbers in the odd places
+    odd_digits = numbers[-1:0:-2]        #because it is a list of integers, the slice notation is different
+    for i in range(0, len(odd_digits)):  #this line iterates over the sliced list
+        sumOdd = sumOdd + odd_digits[i]  #this line adds the numbers in the odd places
     print("This is the odd sum " + str(sumOdd))
     return sumOdd
 
