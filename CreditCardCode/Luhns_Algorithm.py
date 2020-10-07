@@ -4,11 +4,11 @@ This function asks the user for their credit card number and tells them whether 
 
 
 def ask_user():
-    # Takes the credit card number entered by the user and stores it in the variable credit card no
+    # Takes the credit card number entered by the user and stores it in the variable credit card no.
     credit_card_no = (input("Please input your credit card number\n"))
-    # Converts the credit card no into a list of integers
+    # Converts the credit card no into a list of integers.
     numbers = list(map(int, credit_card_no))
-    # calls the validation function if the card_length function returns true
+    # calls the validation function if the card_length function returns true.
     if card_length(numbers):
         validation(numbers)
     else:
