@@ -3,9 +3,10 @@ This is the project from group 47:
 For our assignment we had to make a program based on Luhn's algorithm that can detect
 whether a provided number is a valid credit card number following these set of rules:
 
-1. Double every second digit from right to left.
-    a. If doubling of a digit results in a two-digit number add up the two digits to get a
-single-digit number.
+1. Double every second digit from right to left:
+
+        a. If doubling of a digit results in a two-digit number add up the two digits to get a
+        single-digit number.
 2. Add all single-digit numbers from Step 1.
 3. Add all digits in the odd places from right to left in the card number.
 4. Sum the results from Step 2 and Step 3.
